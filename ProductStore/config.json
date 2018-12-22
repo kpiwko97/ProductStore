@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ProductStoreConnectionString": "server=DESKTOP-1M8PTAO\\SQLEXPRESS;Database=Northwind;Trusted_Connection=true;MultipleActiveResultSets=true"
+  }
+}
