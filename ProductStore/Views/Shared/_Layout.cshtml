@@ -3,11 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Product\store</title>
 </head>
 <body>
-   
-        @RenderBody()
-       
+<div class="container-fluid">
+
+    <nav class="navbar navbar-default">
+        <a href="#" class="navbar-brand">Sklep Internetowy</a>
+    </nav>
+    <div class="row">
+        <div class="col-3" style="background-color: beige; ">
+           Puste Miejsce
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

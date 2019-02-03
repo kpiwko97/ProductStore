@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProductStore.Controllers;
 using ProductStore.Models;
 
 namespace ProductStore
@@ -44,8 +45,13 @@ namespace ProductStore
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "pagelink",
+                    template: "Strona{productPage}",
+                    defaults: new {Controller="Home",Action="Index"});
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+               
             });
         }
     }

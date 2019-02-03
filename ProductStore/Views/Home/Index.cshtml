@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Products>
+﻿@model ProductList
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,35 +8,25 @@
     <title>Home</title>
 </head>
 <body>
-<div class="container-fluid">
-    <table class="table table-bordered table-striped">
-        <thead>
-        <tr>
-            <th>Nazwa</th>
-            <th>Cena</th>
-        </tr>
-        </thead>
-        <tbody>
-        @if (Model.Count() >0)
+    <div product-list="@Model" class="container-fluid">
+        @if (Model.Products.Count() > 0)
         {
-            foreach (var m in Model)
-             {
-                 <tr>
-                    <td>@m.ProductName</td> 
-                    <td>@($"{m.UnitPrice:C2}")</td> 
-                 </tr>
-             }
+            foreach (var product in Model.Products)
+            {
+                <div class="card" style="margin: 1%;">
+                    <div class="card-header">
+                        <div>
+                            <b>@product.ProductName</b>
+                            <span style="float: right" class="badge badge-pill badge-primary"> @($"{product.UnitPrice:C2}")</span>
+                            <span style="float: right" class="badge badge-pill badge-primary"> @product.CategoryID</span>
+                        </div>
+
+                    </div>
+                    <div class="card-body">@product.QuantityPerUnit</div>
+                </div>
+
+            }
         }
-        else
-        {
-            <tr>
-                <td colspan="3" class="text-center" >
-                   Brak elementow do wyswietlenia
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
-</div>
+    </div>
 </body>
 </html>

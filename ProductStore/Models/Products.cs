@@ -20,10 +20,6 @@ namespace ProductStore.Models
         public short UnitsInStock { get; set; }
         public short UnitsOnOrder { get; set; }
         public short ReorderLevel { get; set; }
-        public Boolean Discontinued { get; set; }
-       
-
-
-       
+        public Boolean Discontinued { get; set; }  
     }
 }

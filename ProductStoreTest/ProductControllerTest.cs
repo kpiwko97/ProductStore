@@ -14,6 +14,7 @@ namespace ProductStoreTest
         [Fact]
         public void ControllerTest()
         {
+
             var data = new Products[]
             {
                 new Products {CategoryID = 1, ProductName = "Test", UnitPrice = 1200},
@@ -29,16 +30,16 @@ namespace ProductStoreTest
                 new Products {CategoryID = 11, ProductName = "Test11", UnitPrice = 1210},
             };
             var mock = new Mock<IRepository>();
-            mock.SetupGet(m => m.Product).Returns(data.AsQueryable());
+            mock.Setup(m => m.Product).Returns(data.AsQueryable());
 
             HomeController homeController = new HomeController(mock.Object);
-            homeController.pageSize = 5;
-             
+            homeController.ItemsPerPage = 5;
+
             var result = homeController.Index().ViewData.Model as IEnumerable<Products>;
-            
+
             var Products = result.ToArray();
 
-            Assert.Equal("Test8",Products[7].ProductName);
+            Assert.Equal("Test8", Products[7].ProductName);
 
         }
     }

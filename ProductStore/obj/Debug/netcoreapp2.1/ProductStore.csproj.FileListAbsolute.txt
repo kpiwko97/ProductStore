@@ -5,7 +5,6 @@ C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\bin\Debug\netcoreapp2.
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\bin\Debug\netcoreapp2.1\ProductStore.pdb
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\bin\Debug\netcoreapp2.1\ProductStore.Views.dll
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\bin\Debug\netcoreapp2.1\ProductStore.Views.pdb
-C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.csprojAssemblyReference.cache
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.csproj.CoreCompileInputs.cache
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.RazorAssemblyInfo.cache
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.RazorAssemblyInfo.cs
@@ -24,3 +23,4 @@ C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.dll
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.pdb
 C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.csproj.CopyComplete
+C:\Users\hp 840 g3\source\repos\ProductStore\ProductStore\obj\Debug\netcoreapp2.1\ProductStore.csprojAssemblyReference.cache
