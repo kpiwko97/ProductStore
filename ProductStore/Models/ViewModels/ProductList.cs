@@ -8,6 +8,7 @@ namespace ProductStore.Models.ViewModels
     public class ProductList
     {
         public IEnumerable<Products> Products { get; set; }
+        public IEnumerable<Categories> Categories  { get; set; }
         public PageInfo PageInfo;
     }
 }

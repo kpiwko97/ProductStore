@@ -8,6 +8,6 @@ namespace ProductStore.Models
     public interface IRepository
     {
        IQueryable<Products> Product { get; }
-
+       IQueryable<Categories> Categories { get; }
     }
 }

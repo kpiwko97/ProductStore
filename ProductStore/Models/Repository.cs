@@ -9,8 +9,9 @@ namespace ProductStore.Models
     {
         private readonly ProductContext _context;
 
-        public Repository(ProductContext context) =>_context = context;
+        public Repository(ProductContext context) => _context = context;
 
         public IQueryable<Products> Product => _context.Products;
+        public IQueryable<Categories> Categories => _context.Categories;
     }
 }

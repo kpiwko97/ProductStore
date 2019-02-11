@@ -28,6 +28,8 @@ namespace ProductStore
         public void ConfigureServices(IServiceCollection services)
         {
           services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSession();
+            services.AddMemoryCache();
             services.AddTransient<IRepository, Repository>();
           services.AddDbContext<ProductContext>(config =>
           {
@@ -42,12 +44,18 @@ namespace ProductStore
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "pagelink",
-                    template: "Strona{productPage}",
-                    defaults: new {Controller="Home",Action="Index"});
+                routes.MapRoute(name: "",
+                    template: "Category{productCategory:int}/Strona{productPage:int}",
+                    defaults: new {Controller = "Home", Action = "Index"});
+                routes.MapRoute(name: "",
+                    template:"Category{productCategory:int}",
+                    defaults: new {Controller="Home",Action="Index", productPage = "1"});
+                routes.MapRoute(name: "",
+                    template: "Strona{productPage:int}", 
+                    defaults: new {Controller = "Home", Action = "Index", productCategory = 0 });
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

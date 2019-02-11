@@ -9,7 +9,7 @@ namespace ProductStore.Models
 {
     public class Products
     {
-        //public int Id { get; set; }
+       
         [Key]
         public int ProductID { get; set; }
         public string ProductName { get; set; }

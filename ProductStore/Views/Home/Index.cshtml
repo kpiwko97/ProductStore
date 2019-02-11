@@ -17,14 +17,17 @@
                     <div class="card-header">
                         <div>
                             <b>@product.ProductName</b>
-                            <span style="float: right" class="badge badge-pill badge-primary"> @($"{product.UnitPrice:C2}")</span>
-                            <span style="float: right" class="badge badge-pill badge-primary"> @product.CategoryID</span>
+                            <span style="float: right" class="badge-pill badge-secondary"> @($"{product.UnitPrice:C2}")</span>
+                            <span model="@Model.Categories" category-id="@product.CategoryID" ></span>
                         </div>
-
                     </div>
-                    <div class="card-body">@product.QuantityPerUnit</div>
+                    <div class="card-body">  @product.QuantityPerUnit 
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <input type="hidden" name="productID" value="@product.ProductID"/>
+                            <button type="submit" class="btn btn-default" style="float: right">Dodaj do koszyka</button>
+                        </form>
+                    </div> 
                 </div>
-
             }
         }
     </div>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,13 +9,12 @@
 </head>
 <body>
 <div class="container-fluid">
-
     <nav class="navbar navbar-default">
         <a href="#" class="navbar-brand">Sklep Internetowy</a>
     </nav>
     <div class="row">
-        <div class="col-3" style="background-color: beige; ">
-           Puste Miejsce
+        <div class="col-3" style="min-width: 100px">
+            @await Component.InvokeAsync("NavigationMenu")
         </div>
         <div class="col-9">
             @RenderBody()

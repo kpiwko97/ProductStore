@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+<div class="row">
+    <div class="col">
+        <a style="display: block; font-size: 2.5vh;margin: 2%" class="btn btn-default" asp-controller="Home" asp-action="Index" asp-route-productPage="1" asp-route-productCategory="0">
+            Wszystkie Kategorie
+        </a>
+    </div>
+</div>
+@for (int categoryIndex = 0; categoryIndex < Model.Count(); categoryIndex++)
+{
+<div class="row">
+    <div class="col-12">
+        <a style="display: block; font-size: 2.5vh; margin: 2%" class="btn @(ViewBag.ActualCategory == (categoryIndex+1)? "btn-secondary": "btn-light ")" asp-controller="Home" asp-action="Index"
+           asp-route-productPage="1" asp-route-productCategory="@(categoryIndex + 1)">
+            @Model.ElementAt(categoryIndex)
+        </a>
+    </div>
+    </div>
+}
